@@ -7,7 +7,7 @@
     "description": "Plunder reddit posts for gold",
 
     "browser_action": {
-        "default_title": "plund\/r\/r",
+        "default_title": "plund\/r\/r"
     },
 
     "author": "Daryl and Gabe",
@@ -17,7 +17,7 @@
         "persistent": false
      },
     "icons": {
-        "128": "icon128.png"
+        "128": "plundr.png"
     },
      "content_scripts": [
         {
