@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "plundr",
+    "version":"0.0",
+
+    "default_locale": "en",
+    "description": "Plunder reddit posts for gold",
+
+    "browser_action": {
+        "default_title": "plund\/r\/r",
+    },
+
+    "author": "Daryl and Gabe",
+     
+     "background": {
+        "scripts": ["eventPage.js"],
+        "persistent": false
+     },
+
+     "content_scripts": [
+        {
+            "matches": ["https://www.reddit.com/*"],
+            "exclude_matches":["https://www.reddit.com/u/*", "https://www.reddit.com/r/*/comments/*"],
+            "css":["gold.css"],
+            "js": ["jquery.js","gold.js"]
+        },
+        {
+            "matches": ["https://www.reddit.com/r/*/comments/*"],
+            "css":["hunt.css"],
+            "js":["jquery.js","hunt.js"]
+        }
+     ],
+     "homepage_url": "http://github.com/gmarquez727/plund-r",
+     
+     "permissions":["activeTab"]
+}
