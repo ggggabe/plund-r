@@ -12,7 +12,7 @@
     "author": "Daryl and Gabe",
      
      "background": {
-        "scripts": ["eventPage.js"],
+        "scripts": ["eventPage.js","jquery.js"],
         "persistent": false
      },
     "icons": {
