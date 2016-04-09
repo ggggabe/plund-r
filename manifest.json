@@ -16,7 +16,9 @@
         "scripts": ["eventPage.js"],
         "persistent": false
      },
-
+    "icons": {
+        "128": "icon128.png"
+    },
      "content_scripts": [
         {
             "matches": ["https://www.reddit.com/*"],
