@@ -1,4 +1,6 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
-    alert('clicked');
-    $('div').css("background-color","red");
+    console.log(tab.url.search('reddit'));
+    if( tab.url.search('reddit') < 0) {
+        chrome.tabs.create({ url: "https://www.reddit.com" });
+    }
 });
