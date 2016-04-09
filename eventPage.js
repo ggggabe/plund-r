@@ -1,3 +1,3 @@
-chrome.browserAction.onClicked.addListener(function(tab {
+chrome.browserAction.onClicked.addListener(function(tab) {
     alert('clicked');
-}));
+});
