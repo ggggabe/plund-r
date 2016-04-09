@@ -3,7 +3,6 @@
     "name": "plundr",
     "version":"0.0",
 
-    "default_locale": "en",
     "description": "Plunder reddit posts for gold",
 
     "browser_action": {
