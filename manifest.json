@@ -33,5 +33,5 @@
      ],
      "homepage_url": "http://github.com/gmarquez727/plund-r",
      
-     "permissions":["activeTab"]
+     "permissions":["activeTab","storage"]
 }
