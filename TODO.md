@@ -1,3 +1,3 @@
 # To do
 
-1. Detect gold
+1. [x] ~~Detect gold~~
