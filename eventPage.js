@@ -14,13 +14,22 @@ chrome.browserAction.onClicked.addListener(function(tab) {
         chrome.storage.sync.get('active',
             function(obj){
                 if(obj.active) {
-                    chrome.storage.sync.set({'active' : false}, function() {
-                        chrome.browserAction.setIcon({
-                            path : {
-                                "128" : "./plundr.png"
+                    chrome.storage.sync.set({ active : false}, function() {
+
+                        chrome.browserAction.setIcon({ path : { "128" : "./plundr.png" }} );
+
+                        chrome.tabs.query({}, function(tabs) {
+
+                            var message = { active : false };
+
+                            for( var i=0; i < tabs.length; i++ ) {
+                                chrome.tabs.sendMessage(tabs[i].id, message);
                             }
+
                         });
+
                         console.log('toggled off');
+
                     });
                 }
                 else {
@@ -31,6 +40,17 @@ chrome.browserAction.onClicked.addListener(function(tab) {
                                 "128" : "./plundr-open.png"
                             }
                         });
+
+                        chrome.tabs.query({}, function(tabs) {
+
+                            var message = { active : true };
+
+                            for( var i=0; i < tabs.length; i++ ) {
+                                chrome.tabs.sendMessage(tabs[i].id, message);
+                            }
+
+                        });
+
                         console.log('toggled on');
 
                     });
@@ -40,11 +60,3 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     }
 });
 
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if( request.method == "getStatus" ) {
-        console.log(chrome.storage.sync.get('active'));
-    }
-    else {
-        sendResponse({});
-    }
-});
