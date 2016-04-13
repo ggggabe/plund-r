@@ -7,22 +7,22 @@ function markMeGold( link ) {
 }
 
 function scrape( link ) { //takes a string and scrapes that stuff.
-
     $.get( link, function( data, status, xhr ) {
         if( tharBeGold( data ) >= 0){
             markMeGold( link ); 
         }
     });
-
 }
 
 function plundr() {
+
     console.log("PLUNDERING");
     var comments = $('.comments');
 
     for( var i = 0;i < comments.length; i ++){
         scrape(comments[i].href);
     }
+
 }
 
 function unplundr() {

@@ -7,7 +7,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
                     "128": "./plundr-open.png"
                 }
             });
-            console.log('plund\/r\/ on');
         });
     }
     else {
@@ -26,8 +25,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
                         }
 
                     });
-
-                    console.log('toggled off');
 
                 });
             }

@@ -1,0 +1,23 @@
+.plundr {
+    position:fixed;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    color:#fff;
+    background-color:#000;
+    opacity:.86;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    z-index: 100; /*reddit's header is 99*/
+}
+.plundr > h2 {
+    color: #fff;
+    display:block;
+    align-self: center;
+    font-size:24px;
+}
+.gold {
+    color:#FBB829;
+}
