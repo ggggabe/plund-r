@@ -1,6 +1,6 @@
 function arrYeReady() {
     $('body').css('overflow','hidden');
-    $('body').prepend("<div class='plundr'><h2 id='plundr-message' style='color:#fff !important'>Thar be <span class='gold'>gold</span> up ahead, /r/ ye ready?</h2><h2>Click the gold on a gilded comment to collect yer booty!</h2><h2 id='timer'></h2></div>");
+    $('body').prepend("<div class='plundr'><h2 id='plundr-message' style='color:#fff !important'>Thar be <span class='gold'>gold</span> up ahead, /r/ ye ready?</h2><h2 id='timer'>5</h2><h2>Click the gold on a gilded comment to collect yer booty!</h2></div>");
 }
 
 function tharBeGold() {
@@ -30,7 +30,7 @@ function tick(){
             $('#timer').html(seconds);
         }   
         else if( seconds == 0 ) {
-            $('#timer').html("YARRRRRRRRR");
+            $('#timer').html("YAR!");
         }
         else{
             $('body').css('overflow','');
