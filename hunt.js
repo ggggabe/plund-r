@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     var allTheGolds = $('.gilded-icon');
     var allThePosts = allTheGolds.parents('.entry');
     var tharBeGold = allThePosts.length > 0;
