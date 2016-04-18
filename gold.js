@@ -26,7 +26,7 @@ function plundr() {
 }
 
 function unplundr() {
-    $('.comments').css('color','');
+    $('.comments').removeClass('contains-gold');
     console.log("UNPLUNDERING");
 }
 
