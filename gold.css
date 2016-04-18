@@ -1,3 +1,18 @@
+.contains-gold::before{
+	content: '';
+	display: inline-block;
+	background-image: url('chrome-extension://__MSG_@@extension_id__/plundr.png');
+	background-size: 20px;
+	height: 20px;
+	width: 20px;
+	vertical-align: bottom;
+	animation: flashGold 1s infinite;
+}
 .contains-gold {
-    color:#ffD800;
+    color:#ffD800 !important;
+}
+
+@keyframes flashGold{
+	from {background-image: url('chrome-extension://__MSG_@@extension_id__/plundr.png');}
+	to {background-image: url('chrome-extension://__MSG_@@extension_id__/plundr-open.png');}
 }

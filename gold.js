@@ -3,7 +3,7 @@ function tharBeGold( data ) {
 }
 
 function markMeGold( link ) {
-    $('a[href="'+link+'"]').css('color','#FBB829');
+    $('a[href="'+link+'"]').addClass('contains-gold');
 }
 
 function scrape( link ) { //takes a string and scrapes that stuff.

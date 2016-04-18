@@ -33,5 +33,7 @@
      ],
      "homepage_url": "http://github.com/gmarquez727/plund-r",
      
-     "permissions":["activeTab","storage"]
+     "permissions":["activeTab","storage"],
+
+     "web_accessible_resources": ["plundr.png", "plundr-open.png"]
 }
