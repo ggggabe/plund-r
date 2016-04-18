@@ -24,4 +24,13 @@
 }
 #timer {
     font-size:100px;
+    animation: tremble 0.2s infinite 2s;
+}
+
+@keyframes tremble{
+    0% {margin: 0 0 0 0;}
+    25% {margin: 20px 0 0 20px;}
+    50% {margin: 0 0 0 20px;}
+    75% {margin: 20px 0 0 0;}
+    100% {margin: 0 0 0 0;}
 }
